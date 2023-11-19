@@ -42,7 +42,7 @@ namespace DevExp_IsTakipProjesi.Formlar
             dep.Ad = txtAd.Text;
             db.TblDepartmanlar.Add(dep);
             db.SaveChanges();
-            XtraMessageBox.Show("Departman başarılı bir şekilde sisteme eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            XtraMessageBox.Show("Departman başarılı bir şekilde sisteme eklenmiştir.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Listele();
         }
     }
