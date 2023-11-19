@@ -8,7 +8,7 @@ using System.Windows.Forms;
 namespace DevExp_IsTakipProjesi
 {
     static class Program
-    {
+    {   //codes..
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
