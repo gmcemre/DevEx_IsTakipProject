@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExp_IsTakipProjesi.Formlar;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace DevExp_IsTakipProjesi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormDepartmanlar());
+            Application.Run(new FrmDepartmanlar());
         }
     }
 }
