@@ -39,7 +39,7 @@ namespace DevExp_IsTakipProjesi.Formlar
         private void btnEkle_Click(object sender, EventArgs e)
         {
             TblDepartmanlar departman = new TblDepartmanlar();
-            departman.Ad = txtAd.Text;
+            departman.Ad = txtAd.Text?.Trim();
             db.TblDepartmanlar.Add(departman);
             db.SaveChanges();
             XtraMessageBox.Show("Departman başarılı bir şekilde sisteme eklenmiştir.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
