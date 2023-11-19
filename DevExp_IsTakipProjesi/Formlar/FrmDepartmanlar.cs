@@ -13,13 +13,13 @@ using System.Windows.Forms;
 namespace DevExp_IsTakipProjesi.Formlar
 {
     public partial class FrmDepartmanlar : Form
-    {   //codess..//codess..//codess..
+    {
+        DbIsTakipEntities db = new DbIsTakipEntities();
         public FrmDepartmanlar()
         {
             InitializeComponent();
         }
 
-        DbIsTakipEntities db = new DbIsTakipEntities();
         private void btnListele_Click(object sender, EventArgs e)
         {
             Listele();
@@ -38,12 +38,19 @@ namespace DevExp_IsTakipProjesi.Formlar
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            TblDepartmanlar departman = new TblDepartmanlar();
-            departman.Ad = txtAd.Text?.Trim();
-            db.TblDepartmanlar.Add(departman);
-            db.SaveChanges();
-            XtraMessageBox.Show("Departman başarılı bir şekilde sisteme eklenmiştir.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Listele();
+            try
+            {
+                TblDepartmanlar departman = new TblDepartmanlar();
+                departman.Ad = txtAd.Text?.Trim();
+                db.TblDepartmanlar.Add(departman);
+                db.SaveChanges();
+                XtraMessageBox.Show("Departman başarılı bir şekilde sisteme eklenmiştir.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Listele();
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "HATA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

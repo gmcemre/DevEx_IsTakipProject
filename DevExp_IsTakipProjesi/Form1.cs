@@ -20,11 +20,15 @@ namespace DevExp_IsTakipProjesi
 
         private void btnDepartmanListesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            FrmDepartmanlar frm = new FrmDepartmanlar();
-            if (frm == null)
+            try
             {
+                FrmDepartmanlar frm = new FrmDepartmanlar();
                 frm.MdiParent = this;
                 frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }
