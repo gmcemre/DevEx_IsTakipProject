@@ -47,9 +47,9 @@ namespace DevExp_IsTakipProjesi.Formlar
         {
             try
             {
-                TblDepartmanlar departman = new TblDepartmanlar();
-                departman.Ad = txtAd.Text?.Trim();
-                db.TblDepartmanlar.Add(departman);
+                TblDepartmanlar dep = new TblDepartmanlar();
+                dep.Ad = txtAd.Text?.Trim();
+                db.TblDepartmanlar.Add(dep);
                 db.SaveChanges();
                 XtraMessageBox.Show("Departman başarılı bir şekilde sisteme eklenmiştir.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Listele();
