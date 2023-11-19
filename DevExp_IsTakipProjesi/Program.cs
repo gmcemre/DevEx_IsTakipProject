@@ -17,7 +17,7 @@ namespace DevExp_IsTakipProjesi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmDepartmanlar());
+            Application.Run(new Form1());
         }
     }
 }
