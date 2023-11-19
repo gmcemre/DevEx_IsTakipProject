@@ -27,13 +27,20 @@ namespace DevExp_IsTakipProjesi.Formlar
 
         private void Listele()
         {
-            var degerler = (from x in db.TblDepartmanlar
-                            select new
-                            {
-                                x.Id,
-                                x.Ad
-                            }).ToList();
-            gridControl1.DataSource = degerler;
+            try
+            {
+                var degerler = (from x in db.TblDepartmanlar
+                                select new
+                                {
+                                    x.Id,
+                                    x.Ad
+                                }).ToList();
+                gridControl1.DataSource = degerler;
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "HATA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnEkle_Click(object sender, EventArgs e)
