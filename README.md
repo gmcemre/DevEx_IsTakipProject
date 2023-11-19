@@ -1,0 +1,1 @@
+# DevEx_IsTakipProject
