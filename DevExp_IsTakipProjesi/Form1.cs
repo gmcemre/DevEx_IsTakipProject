@@ -18,12 +18,11 @@ namespace DevExp_IsTakipProjesi
             InitializeComponent();
         }
 
-        FrmDepartmanlar frm;
         private void btnDepartmanListesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            FrmDepartmanlar frm = new FrmDepartmanlar();
             if (frm == null)
             {
-                frm = new FrmDepartmanlar();
                 frm.MdiParent = this;
                 frm.Show();
             }
