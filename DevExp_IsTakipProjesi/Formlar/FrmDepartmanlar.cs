@@ -22,10 +22,10 @@ namespace DevExp_IsTakipProjesi.Formlar
 
         private void btnListele_Click(object sender, EventArgs e)
         {
-            Listele();
+            Listeleme();
         }
 
-        private void Listele()
+        private void Listeleme()
         {
             try
             {
@@ -52,7 +52,7 @@ namespace DevExp_IsTakipProjesi.Formlar
                 db.TblDepartmanlar.Add(dep);
                 db.SaveChanges();
                 XtraMessageBox.Show("Departman başarılı bir şekilde sisteme eklenmiştir.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Listele();
+                Listeleme();
             }
             catch (Exception ex)
             {
