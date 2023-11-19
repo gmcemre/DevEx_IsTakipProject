@@ -13,7 +13,7 @@ using System.Windows.Forms;
 namespace DevExp_IsTakipProjesi.Formlar
 {
     public partial class FrmDepartmanlar : Form
-    {
+    {   //codess..
         public FrmDepartmanlar()
         {
             InitializeComponent();
